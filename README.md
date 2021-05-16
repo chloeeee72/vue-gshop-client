@@ -62,7 +62,7 @@ vue 外卖客户端app - 前端
 - 商家信息
 
 ## API接口
-[后台项目及接口文档：](https://github.com/chloeeee72/vue-gshop-server)
+[后台项目及接口文档](https://github.com/chloeeee72/vue-gshop-server/blob/master/API%E6%96%87%E6%A1%A3.md)
 
 ## Build Setup
 
