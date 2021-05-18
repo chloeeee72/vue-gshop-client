@@ -1,10 +1,6 @@
 <template>
   <section class="search">
-    <header class="header">
-      <a class="header_title">
-        <span class="header_title_text">搜索</span>
-      </a>
-    </header>
+    <header-top title="搜索"></header-top>
     <form class="search_form" action="#">
       <input
         type="search"

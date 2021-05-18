@@ -1,10 +1,6 @@
 <template>
   <section class="profile">
-    <header class="header">
-      <a class="header_title">
-        <span class="header_title_text">我的</span>
-      </a>
-    </header>
+    <header-top title="我的"></header-top>
     <section class="profile-number">
       <a href="javascript:" class="profile-link">
         <div class="profile_image">
@@ -102,7 +98,7 @@ export default {};
 <style lang="stylus" rel="stylesheet/stylus">
 @import "../../common/stylus/mixins.styl"
 .profile //我的
-          width 100% 
+          width 100%
           .header
             background-color #02a774
             position fixed
