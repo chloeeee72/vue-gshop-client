@@ -6,13 +6,23 @@
 </template>
 
 <script>
+import { mapActions } from "vuex";
 import FooterGuide from "@/components/FooterGuide/FooterGuide";
-import { reqFoodCategorys } from "@/api/index";
+// import { reqFoodCategories } from "@/api/index";
 export default {
   name: "App",
-  async mounted() {
-    const result = await reqFoodCategorys();
-    console.log(result);
+  // async mounted() {
+  //   const result = await reqFoodCategories();
+  //   console.log(result);
+  // },
+  mounted() {
+    // const address = this.$store.dispatch("getAddress");
+    // console.log(address);
+    const address = this.getAddress();
+    console.log(address);
+  },
+  methods: {
+    ...mapActions(["getAddress"])
   },
   components: {
     FooterGuide

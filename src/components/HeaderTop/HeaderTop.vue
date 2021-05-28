@@ -11,10 +11,10 @@
 
 <script>
 export default {
-  name:'header-top',
-  props:{
-    title:String
-  }
+  name: "header-top",
+  props: {
+    title: String
+  },
 };
 </script>
 

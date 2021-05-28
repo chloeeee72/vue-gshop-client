@@ -13,7 +13,7 @@ export const reqAddress = geohash => ajax(`${BASE_URL}/position/${geohash}`);
 //     method: "get"
 //   });
 // }
-export const reqFoodCategorys = () => ajax(BASE_URL + "/index_category");
+export const reqFoodCategories = () => ajax(BASE_URL + "/index_category");
 
 // 3、根据经纬度获取商铺列表
 export const reqShops = (longitude, latitude) =>
