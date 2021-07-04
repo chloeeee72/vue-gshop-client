@@ -19,7 +19,7 @@ export default {
     // const address = this.$store.dispatch("getAddress");
     // console.log(address);
     const address = this.getAddress();
-    console.log(address);
+    // console.log(address);
   },
   methods: {
     ...mapActions(["getAddress"])
