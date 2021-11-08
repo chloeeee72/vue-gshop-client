@@ -104,8 +104,9 @@
                 />
                 <img
                   class="get_verification"
-                  src="./images/captcha.svg"
+                  :src="captchaUrl"
                   alt="captcha"
+                  @click="getCaptcha"
                 />
               </section>
             </section>
@@ -128,7 +129,7 @@
 </template>
 
 <script>
-import AlertTip from "../../components/AlertTip/AlertTip";
+import AlertTip from "@/components/AlertTip/AlertTip";
 export default {
   data() {
     return {
@@ -141,12 +142,13 @@ export default {
       name: "", // 用户名
       captcha: "", // 图形验证码
       alertText: "", // 提示文本
-      alertShow: false // 是否显示警告框
+      alertShow: false, // 是否显示警告框
+      captchaUrl: "", // 图形验证码地址
     };
   },
   computed: {
     rightPhone() {
-      // test() 方法用于检测一个字符串是否匹配某个模式.
+      // test() 方法用于检测一个字符串是否匹配正则表达式.
       // RegExpObject.test(string)
       // 如果字符串 string 中含有与 RegExpObject 匹配的文本，则返回 true，否则返回 false。
       return /^1\d{10}$/.test(this.phone);
@@ -203,9 +205,19 @@ export default {
         }
       }
     },
+    // 关闭警告框
     closeTip() {
       this.alertShow = false;
       this.alertText = "";
+    },
+    // 更新获取图片验证码
+    // 每次指定的图片地址(src)变化，都会触发该方法
+    getCaptcha() {
+      this.captchaUrl = "http://localhost:4000/captcha?time=" + new Date().getTime();
+    },
+    // 切换登录方式
+    changeWay() {
+      this.loginWay = !this.loginWay;
     }
   },
 
